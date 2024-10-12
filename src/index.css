@@ -1,0 +1,56 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-[#004AEC]/50 shadow-[0_0_10px_rgba(0,74,236,0.5)];
+  }
+
+  .neon-text {
+    @apply text-[#004AEC];
+    text-shadow: 0 0 5px rgba(0,74,236,0.5);
+  }
+
+  .futuristic-input {
+    @apply bg-[#09111D]/30 border-[#001E4B]/50 text-white focus:ring-[#004AEC]/50 focus:border-[#004AEC]/50 backdrop-blur-sm;
+  }
+
+  .futuristic-button {
+    @apply bg-gradient-to-r from-[#004AEC] to-[#001E4B] hover:from-[#0056FF] hover:to-[#002A6B] text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg backdrop-blur-sm;
+  }
+
+  .glass-effect {
+    @apply bg-[#09111D]/30 backdrop-filter backdrop-blur-md border border-[#001E4B]/50;
+  }
+
+  .glass-card {
+    @apply bg-[#09111D]/30 backdrop-filter backdrop-blur-md border border-[#001E4B]/50 rounded-lg shadow-lg;
+  }
+}
+
+.slate-content h1 {
+  @apply text-2xl font-bold mb-2 neon-text;
+}
+
+.slate-content h2 {
+  @apply text-xl font-bold mb-2 neon-text;
+}
+
+.slate-content p {
+  @apply mb-4;
+}
+
+.slate-content ul {
+  @apply list-disc list-inside mb-4;
+}
+
+.slate-content ol {
+  @apply list-decimal list-inside mb-4;
+}
